@@ -1,0 +1,7 @@
+{
+  "render_type": "cutout",
+  "parent": "block/cross",
+  "textures": {
+    "cross": "rsgauges:block/plants/powerplant_yellow_s00"
+  }
+}
