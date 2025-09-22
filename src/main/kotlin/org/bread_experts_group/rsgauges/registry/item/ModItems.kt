@@ -6,6 +6,7 @@ import net.neoforged.neoforge.registries.DeferredItem
 import net.neoforged.neoforge.registries.DeferredRegister
 import org.bread_experts_group.rsgauges.registry.RegistryProvider
 
+@Suppress("unused")
 object ModItems : RegistryProvider(Registries.ITEM) {
 	private val registry: DeferredRegister<Item> = this.getRegistry(Registries.ITEM)
 	fun itemIterator(): Iterator<DeferredItem<Item>> = object : Iterator<DeferredItem<Item>> {
@@ -17,6 +18,7 @@ object ModItems : RegistryProvider(Registries.ITEM) {
 		}
 	}
 
+	val SWITCHLINK_PEARL: DeferredItem<Item> = this.registerItem("switchlink_pearl")
 	fun <T : Item> registerItem(id: String, item: () -> T): DeferredItem<T> {
 		val holder = this.registry.register(id, item)
 		return DeferredItem.createItem(holder.id)
